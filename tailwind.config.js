@@ -11,7 +11,7 @@ export default {
         panel: "#2c2056",
         haze: "#3a2c6e",
         // Accents
-        neon: "#ff5fa2", // hot pink
+        neon: "rgb(var(--accent) / <alpha-value>)", // driven by --accent in index.css
         grape: "#a07cff", // lavender / links
         cyan: "#5fe0ff", // teal pop
         gold: "#ffd45f", // coin yellow
@@ -27,7 +27,7 @@ export default {
         // Chunky offset "pixel" shadow
         pixel: "4px 4px 0 0 rgba(0,0,0,0.45)",
         "pixel-lg": "6px 6px 0 0 rgba(0,0,0,0.45)",
-        glow: "0 0 24px 0 rgba(255,95,162,0.45)",
+        glow: "0 0 24px 0 rgb(var(--accent) / 0.45)",
       },
       keyframes: {
         ticker: {

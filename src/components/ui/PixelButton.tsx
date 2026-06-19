@@ -10,7 +10,7 @@ interface Props {
 }
 
 const styles: Record<Variant, string> = {
-  primary: "bg-neon text-void hover:bg-pink-400 border-void",
+  primary: "bg-neon text-void hover:brightness-110 border-void",
   secondary: "bg-panel text-ink hover:bg-haze border-grape",
 };
 
