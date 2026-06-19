@@ -4,6 +4,10 @@ Prototype website for our indie game studio — built in our spare time.
 
 > ⚠️ Work in progress. Logo, copy, and game art are placeholders for now.
 
+## Preview
+
+![Last Stop Games — full page layout](design/webdesign.png)
+
 ## Stack
 
 - [Vite](https://vite.dev/) + React + TypeScript
