@@ -9,8 +9,9 @@ import { DEFAULT_SOURCES, deriveTheme, type ThemeSources } from "../theme";
  * range derives from (see src/theme.ts). Move the purple and every shade +
  * border shifts together, staying in harmony.
  *
- * Hidden from real visitors: only mounts in dev, or when the URL has `?theme`
- * (so a deployed preview link like `.../?theme=1` enables it for everyone).
+ * Visible while developing: in dev, and on the GitHub Pages project site
+ * (where the base path is `/lsg-website/`). It auto-hides on the real launch —
+ * i.e. once `base` is switched to `/` for a custom domain in vite.config.ts.
  */
 
 interface Source {
@@ -29,15 +30,14 @@ const SOURCES: Source[] = [
 
 const STORAGE_KEY = "lsg-theme-sources";
 
+// Show in dev, and on any non-root deployment (the GitHub Pages project site).
+// When `base` becomes "/" for the real custom domain, this turns off.
 const themeEnabled = () =>
-  import.meta.env.DEV ||
-  new URLSearchParams(window.location.search).has("theme");
+  import.meta.env.DEV || import.meta.env.BASE_URL !== "/";
 
 export default function ThemeLab() {
-  // Open immediately if someone is handed a `?theme` link.
-  const [open, setOpen] = useState(
-    () => new URLSearchParams(window.location.search).has("theme"),
-  );
+  // Start collapsed to the 🎨 launcher so it never covers content.
+  const [open, setOpen] = useState(false);
   const [copied, setCopied] = useState(false);
 
   const [sources, setSources] = useState<ThemeSources>(() => {
