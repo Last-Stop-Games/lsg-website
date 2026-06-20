@@ -7,3 +7,7 @@ dist-ssr
 
 # Local Claude Code config
 .claude/
+
+# Emitted from vite.config.ts by tsc (would shadow the real .ts config)
+vite.config.js
+vite.config.d.ts

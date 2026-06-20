@@ -2,6 +2,9 @@
   "compilerOptions": {
     "composite": true,
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+    // Keep emitted .d.ts out of the project root (Vite resolves vite.config.js
+    // before .ts, so a stray emitted config would shadow the real one).
+    "declarationDir": "./node_modules/.tmp/types",
     "target": "ES2022",
     "lib": ["ES2023"],
     "module": "ESNext",
