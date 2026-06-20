@@ -4,10 +4,20 @@
 
 @layer base {
   :root {
-    /* ── Accent color: change THIS one line to recolor the whole site ──
+    /* ── Theme colors ──────────────────────────────────────────────
        Space-separated RGB channels (so Tailwind opacity modifiers work).
-       Hot pink: 255 95 162   ·   Mint green: 79 232 176 */
+       These are *derived* from two source colors (accent + a purple base)
+       via src/theme.ts — the purple shades below all share one hue, so
+       they stay in harmony. Tweak them live in the Theme Lab panel
+       (dev, or add ?theme to the URL) and Export to update these lines.
+       Accent — hot pink: 255 95 162 · mint green: 79 232 176 */
     --accent: 79 232 176;
+    --void: 13 10 28; /* page background (darkest purple) */
+    --space: 22 16 45; /* section band */
+    --nebula: 33 25 69; /* cards */
+    --panel: 13 10 28; /* = --void: card band reuses page bg (see theme.ts) */
+    --haze: 54 40 113; /* borders */
+    --grape: 156 143 214; /* light-purple accent (links, secondary borders) */
   }
 
   html {

@@ -10,7 +10,7 @@ export default function Hero() {
         <div className="mb-10 w-full max-w-md animate-float">
           <Placeholder
             label="Studio Key Art / Logo"
-            color="#221945"
+            color="rgb(var(--accent))"
             aspect="aspect-[16/9]"
             className="shadow-pixel-lg"
           />

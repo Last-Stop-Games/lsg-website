@@ -4,15 +4,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Cosmic purple backdrop, deep -> light
-        void: "#0d0820",
-        space: "#150f2e",
-        nebula: "#221945",
-        panel: "#2c2056",
-        haze: "#3a2c6e",
+        // Cosmic purple backdrop, deep -> light (driven by CSS vars in index.css)
+        void: "rgb(var(--void) / <alpha-value>)",
+        space: "rgb(var(--space) / <alpha-value>)",
+        nebula: "rgb(var(--nebula) / <alpha-value>)",
+        panel: "rgb(var(--panel) / <alpha-value>)",
+        haze: "rgb(var(--haze) / <alpha-value>)",
         // Accents
         neon: "rgb(var(--accent) / <alpha-value>)", // driven by --accent in index.css
-        grape: "#a07cff", // lavender / links
+        grape: "rgb(var(--grape) / <alpha-value>)", // lavender / links (derived)
         cyan: "#5fe0ff", // teal pop
         gold: "#ffd45f", // coin yellow
         // Text

@@ -49,8 +49,9 @@ export default function PixelSlant({
       className="block w-full"
       style={{ height, transform: flip ? "scaleX(-1)" : undefined }}
     >
-      {from && <polygon points={topPts} fill={from} />}
-      {to && <polygon points={bottomPts} fill={to} />}
+      {/* fill via style (not the `fill` attribute) so CSS var() colors resolve */}
+      {from && <polygon points={topPts} style={{ fill: from }} />}
+      {to && <polygon points={bottomPts} style={{ fill: to }} />}
     </svg>
   );
 }

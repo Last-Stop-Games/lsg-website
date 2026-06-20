@@ -8,10 +8,11 @@ import Team from "./components/Team";
 import Devlog from "./components/Devlog";
 import Footer from "./components/Footer";
 import PixelSlant from "./components/ui/PixelSlant";
+import ThemeLab from "./components/ThemeLab";
 
-// Solid band colors (must match tailwind palette in tailwind.config.js).
-const SPACE = "#150f2e";
-const NEBULA = "#2c2056"; // = palette `panel`, lighter for clearer slant contrast
+// Solid band colors — read from the CSS theme vars so slants recolor live too.
+const SPACE = "rgb(var(--space))";
+const NEBULA = "rgb(var(--panel))"; // lighter `panel` shade for clearer slant contrast
 
 export default function App() {
   return (
@@ -51,6 +52,8 @@ export default function App() {
       {/* Band fades back out to the starfield for the footer */}
       <PixelSlant from={SPACE} flip />
       <Footer />
+
+      <ThemeLab />
     </>
   );
 }

@@ -28,7 +28,7 @@ export default function About() {
 
         <Placeholder
           label="Studio Photo / Mascot"
-          color="#2c2056"
+          color="rgb(var(--accent))"
           aspect="aspect-square"
           className="shadow-pixel-lg"
         />
